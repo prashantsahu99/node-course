@@ -1,8 +1,6 @@
 const chalk = require("chalk");
 const fs = require("fs");
-const getNotes = () => {
-  return "Your Notes...";
-};
+
 const addNote = (title, body) => {
   const notes = loadNotes();
   const duplicateNotes = notes.filter((item) => {
@@ -53,9 +51,9 @@ const read = (title) => {
     return item.title === title;
   });
   if (readNote) {
-    console.log("Title:- " + readNote.title);
-    console.log("Body:- " + readNote.body);
-  } else console.log("Note not exist!");
+    console.log(chalk.greenBright("Title:- " + readNote.title));
+    console.log(chalk.greenBright("Body:- " + readNote.body));
+  } else console.log(chalk.redBright("Note not exist!"));
 };
 
 const loadNotes = () => {
@@ -68,7 +66,6 @@ const loadNotes = () => {
   }
 };
 module.exports = {
-  getNotes: getNotes,
   addNote: addNote,
   removeNote: removeNote,
   listing: listing,
