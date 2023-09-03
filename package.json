@@ -1,0 +1,18 @@
+{
+  "name": "node-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prashant Sahu",
+  "license": "ISC",
+  "dependencies": {
+    "postman-request": "^2.88.1-postman.33",
+    "yargs": "^17.7.2",
+    "chalk": "^4.1.2",
+    "nodemon": "^3.0.1",
+    "validator": "^10.8.0"
+  }
+}
