@@ -26,16 +26,16 @@ else{
 //   },
 // });
 
-function findWeather(location) {
-  geocode(location, (err, geoData) => {
+function findWeather(address) {
+  geocode(address, (err, {latitude, longitude, location}) => {
     if (err) {
       return console.log("Error : " + err);
     } else {
-      forecast(geoData.latitude, geoData.longitude, (err, data) => {
+      forecast(latitude, longitude, (err, data) => {
         if (err) {
           return console.log("forecast Error: " + err);
         } else {
-          console.log(geoData.location)
+          console.log(location)
           console.log(data);
         }
       });
